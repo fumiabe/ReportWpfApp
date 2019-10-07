@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ReportWpfApp.Properties {
+namespace Top.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

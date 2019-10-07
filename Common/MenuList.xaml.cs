@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -13,26 +12,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ReportWpfApp
+namespace Common
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// MenuList.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class MenuList : UserControl
     {
-        //private ObservableCollection datas = new ObservableCollection();
-
-        public MainWindow()
+        public MenuList()
         {
             InitializeComponent();
-
-            
-            //listBox.ItemsSource = new TestList().Data;
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }
