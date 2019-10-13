@@ -54,8 +54,7 @@
             <TextBox Style="{DynamicResource DefaultNumberBoxStyle}"
                      Width="{TemplateBinding Width}" 
                      Text="{TemplateBinding Value}"
-                     MaxLength="{TemplateBinding MaxLength}"
-                     TextAlignment="Right"/>
+                     MaxLength="{TemplateBinding MaxLength}"/>
         </StackPanel>
     </ControlTemplate>
     <ControlTemplate x:Key="ReportItemContent_Date"  TargetType="local:ReportItemField" >
@@ -64,6 +63,19 @@
                 SelectedDate="{TemplateBinding Value}"
                 SelectedDateFormat="Short" />
         </StackPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ReportItemContent_Time"  TargetType="local:ReportItemField" >
+        <WrapPanel>
+            <TextBox Style="{DynamicResource DefaultNumberBoxStyle}"
+                     Width="20" MaxLength="2"
+                     Text="{TemplateBinding Value}"/>
+            <Label Style="{DynamicResource DefaultLabelStyle}" Padding="2,0"
+                    Height="{StaticResource DefaultInputFieldHeight}"
+                    Content=":" />
+            <TextBox Style="{DynamicResource DefaultNumberBoxStyle}"
+                     Width="20" MaxLength="2"
+                     Text="{TemplateBinding Value}"/>
+        </WrapPanel>
     </ControlTemplate>
     <ControlTemplate x:Key="DefaultRadioButton"  TargetType="RadioButton" >
         <Label Style="{DynamicResource DefaultLabelStyle}"
@@ -144,7 +156,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:ReportItem">
-                    <StackPanel Margin="0,0,0,3" >
+                    <StackPanel Margin="0,0,0,3" HorizontalAlignment="Left">
                         <Label Content="{TemplateBinding ItemTitle}" 
                                Margin="0" Padding="2,0,0,0"
                                FontFamily="{StaticResource DefaultFont}"
@@ -153,7 +165,8 @@
                         <local:ReportItemField x:Name="ReportItemFieldTpl" 
                                                  Width="{TemplateBinding FieldWidth}"
                                                  Value="{TemplateBinding FieldValue}"
-                                               MaxWidth="{TemplateBinding MaxWidth}"/>
+                                               MaxWidth="{TemplateBinding MaxWidth}"
+                                               HorizontalAlignment="Left"/>
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="ItemDataType" Value="TextBox">
@@ -167,6 +180,9 @@
                         </Trigger>
                         <Trigger Property="ItemDataType" Value="Position">
                             <Setter TargetName="ReportItemFieldTpl" Property="Template" Value="{StaticResource ReportItemContent_Position}" />
+                        </Trigger>
+                        <Trigger Property="ItemDataType" Value="Time">
+                            <Setter TargetName="ReportItemFieldTpl" Property="Template" Value="{StaticResource ReportItemContent_Time}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

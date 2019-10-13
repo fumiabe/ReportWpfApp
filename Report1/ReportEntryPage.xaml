@@ -36,8 +36,9 @@
                         <StackPanel Width="Auto" Margin="5,0,10,5">
                             <Label Content="Header" Style="{DynamicResource HeaderLabel1}"/>
                             <StackPanel>
-                                <Common:ReportItem Name="name" ItemName="name" ItemTitle="Name" ItemDataType="TextBox" FieldWidth="100" FieldValue="content"/>
                                 <Common:ReportItem ItemName="date" ItemTitle="Date" ItemDataType="Date" FieldValue="2019/10/1"/>
+                                <Common:ReportItem Name="name" ItemName="Time" ItemTitle="Time" ItemDataType="Time" FieldWidth="100" FieldValue="00"/>
+
                             </StackPanel>
 
                         </StackPanel>
@@ -50,7 +51,7 @@
                         <StackPanel Width="Auto" Margin="5,0,10,5">
                             <Label Content="Header" Style="{DynamicResource HeaderLabel1}"/>
                             <StackPanel>
-                                <Common:ReportItem ItemName="name" ItemTitle="Number" ItemDataType="NumberBox" FieldWidth="100" FieldValue="0"/>
+                                <Common:ReportItem ItemName="name" ItemTitle="NumberNumberNumberNumber" ItemDataType="NumberBox" FieldWidth="100" FieldValue="0"/>
                                 <Common:ReportItem ItemName="name" ItemTitle="Name" ItemDataType="TextBox" FieldWidth="100" FieldValue="content"/>
                                 <Common:ReportItem ItemName="name" ItemTitle="Name" ItemDataType="TextBox" FieldWidth="100" FieldValue="content"/>
                             </StackPanel>
