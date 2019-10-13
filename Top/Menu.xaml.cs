@@ -40,5 +40,10 @@ namespace Top
             var uri = new Uri(uriStr, UriKind.Relative);
             navigationWindow.Navigate(uri);
         }
+
+        private void MenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            getPage("/Report1;component/ReportEntryPage.xaml");
+        }
     }
 }

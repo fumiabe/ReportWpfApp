@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Top"
       xmlns:Common="clr-namespace:Common;assembly=Common"
-    xmlns:Common1="clr-namespace:System.Runtime.Remoting.Messaging;assembly=mscorlib" 
+    xmlns:system="clr-namespace:System.Runtime.Remoting.Messaging;assembly=mscorlib" 
       x:Class="Top.TopPage"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -34,10 +34,10 @@
             <RadioButton Content="RadioButton"/>
             <Grid>
                 <WrapPanel>
-                    <Common:ReportItem LabelContent="Item1" TextBoxWidth="100" />
-                    <Common:ReportItem LabelContent="Item2" TextBoxWidth="200" />
-                    <Common:ReportItem LabelContent="Item3" TextBoxWidth="400" />
-                    <Common:ReportItem LabelContent="Item4" TextBoxWidth="1000" />
+                    <local:ReportItem LabelContent="Item1" TextBoxWidth="100" />
+                    <local:ReportItem LabelContent="Item2" TextBoxWidth="200" />
+                    <local:ReportItem LabelContent="Item3" TextBoxWidth="400" />
+                    <local:ReportItem LabelContent="Item4" TextBoxWidth="1000" />
 
                 </WrapPanel>
             </Grid>

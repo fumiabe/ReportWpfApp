@@ -12,6 +12,7 @@
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Common;component/Style/Common.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -19,7 +20,10 @@
     <Grid>
         <StackPanel>
             <Common:Header Title="Menu" />
-            <Common:MenuList />
+            <StackPanel Margin="5">
+                <Common:MenuButton Content="Report" Click="MenuButton_Click" />
+
+            </StackPanel>
 
         </StackPanel>
     </Grid>

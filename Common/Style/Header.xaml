@@ -8,13 +8,17 @@
     <Style TargetType="Grid">
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Height" Value="30" />
         <Setter Property="Background" Value="{StaticResource TitleBgColor}" />
 
     </Style>
     <Style TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="0" />
+
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontSize" Value="{StaticResource TitleFontSize}" />
         <Setter Property="Foreground" Value="{StaticResource TitleColor}" />
 
     </Style>

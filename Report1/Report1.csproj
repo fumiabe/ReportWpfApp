@@ -38,12 +38,19 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="wpftoolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportEntryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -53,6 +60,9 @@
     </Page>
     <Compile Include="Form.xaml.cs">
       <DependentUpon>Form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportEntryPage.xaml.cs">
+      <DependentUpon>ReportEntryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
@@ -81,6 +91,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{28456cbe-477f-4d76-94f1-9b4555e1e59b}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Top\Top.csproj">
+      <Project>{3C6B76B0-EB08-4DCB-A3B6-D09536257152}</Project>
+      <Name>Top</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
