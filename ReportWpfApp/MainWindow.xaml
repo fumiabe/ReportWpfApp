@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReportWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024" 
+        Title="MainWindow" Height="738" Width="1024" 
         Source="/Top;component/Menu.xaml" ShowsNavigationUI="False">
 </NavigationWindow>

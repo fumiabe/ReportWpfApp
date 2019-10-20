@@ -4,7 +4,9 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Report1"
-      xmlns:Common="clr-namespace:Common;assembly=Common" x:Class="Report1.ReportEntryPage"
+      xmlns:Common="clr-namespace:Common;assembly=Common"
+      
+      x:Class="Report1.ReportEntryPage"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="1000"
       Title="ReportEntryPage">
