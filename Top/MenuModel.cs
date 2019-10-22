@@ -9,31 +9,36 @@ namespace Top
     public class MenuModel
     {
         // データテーブル
-        public DataTable ConsuptionTable = new DataTable("Consuption");
+        public DataTable _consuptionTable = new DataTable();
 
         public MenuModel(List<FuelData> fuelDatas)
         {
 
-            ConsuptionTable.Columns.Add(new DataColumn("Use", typeof(string)));
+            _consuptionTable.Columns.Add(new DataColumn("Use", typeof(string)));
 
-            IEnumerable<string> fuels = fuelDatas.Select(x => x.FuelName);
-
+            // 燃料一覧を取得
+            IEnumerable<string> fuels = fuelDatas.Select(fuelData => fuelData.FuelName).Distinct();
             foreach(string val in fuels)
             {
-                ConsuptionTable.Columns.Add(new DataColumn(val, typeof(int)));
+                _consuptionTable.Columns.Add(new DataColumn(val, typeof(double)));
             }
 
-            // サンプルデータ追加
-            DataRow newRowItem;
-            foreach (FuelData data in fuelDatas)
+            // 用途ごとの行を作成
+            IEnumerable<string> uses = fuelDatas.Select(fuelData => fuelData.Use).Distinct();
+            foreach (string val in uses)
             {
-                newRowItem = ConsuptionTable.NewRow();
-                newRowItem["Use"] = data.Use;
+                DataRow newRowItem = _consuptionTable.NewRow();
 
-                newRowItem["test_id"] = "";
-                ConsuptionTable.Rows.Add(newRowItem);
+                IEnumerable<FuelData> datas = fuelDatas.Where(fuelData => fuelData.Use == val);
+
+                newRowItem["Use"] = val;
+                foreach (FuelData data in datas)
+                {
+                    newRowItem[data.FuelName] = data.FuelValue;
+                }
+                _consuptionTable.Rows.Add(newRowItem);
+
             }
-
 
         }
 

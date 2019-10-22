@@ -26,9 +26,18 @@
                     <Common:MenuButton Content="Report" Click="MenuButton_Click" />
 
                 </StackPanel>
-                <ToolKit:DataGrid x:Name="FuellDataGrid" Height="500"
+                <ScrollViewer>
+                    <StackPanel>
+                        <ToolKit:DataGrid x:Name="FuellDataGrid" Height="500"
                                   AutoGenerateColumns="False" 
-                                  DataContext="{Binding}" ItemsSource="{Binding}" />
+                                  DataContext="{Binding}" 
+                                  ItemsSource="{Binding}" />
+                        <WrapPanel x:Name="TotalRow">
+                            <TextBlock Text="TOTAL" />
+                        </WrapPanel>
+                    </StackPanel>
+                </ScrollViewer>
+
             </WrapPanel>
 
         </StackPanel>

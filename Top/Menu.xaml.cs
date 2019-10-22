@@ -37,8 +37,12 @@ namespace Top
             InitializeComponent();
 
             fuelDatas.Add(new FuelData { Use = "MAIN ENGINE", FuelName = "AAA", FuelValue = 100.1 });
-            fuelDatas.Add(new FuelData { Use = "MAIN ENGINE", FuelName = "BBB", FuelValue = 100.1 });
-            fuelDatas.Add(new FuelData { Use = "MAIN ENGINE", FuelName = "CCC", FuelValue = 100.1 });
+            fuelDatas.Add(new FuelData { Use = "MAIN ENGINE", FuelName = "BBB", FuelValue = 100.2 });
+            fuelDatas.Add(new FuelData { Use = "MAIN ENGINE", FuelName = "CCC", FuelValue = 100.3 });
+
+            fuelDatas.Add(new FuelData { Use = "BOILER", FuelName = "AAA", FuelValue = 200.1 });
+            fuelDatas.Add(new FuelData { Use = "BOILER", FuelName = "CCC", FuelValue = 200.3 });
+
 
             try
             {
@@ -50,8 +54,10 @@ namespace Top
                 return;
             }
 
+            var model = new MenuModel(fuelDatas);
+            FuellDataGrid.DataContext = model._consuptionTable;
 
-            this.DataContext = new MenuModel(fuelDatas);
+            //this.DataContext = model;
 
         }
 
@@ -61,27 +67,42 @@ namespace Top
         /// </summary>
         private void InitTables()
         {
-            // 水平スクロールバー
-            FuellDataGrid.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
-            // 垂直スクロールバー
-            FuellDataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            //// 水平スクロールバー
+            //FuellDataGrid.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
+            //// 垂直スクロールバー
+            //FuellDataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
 
+            // 用途カラムを追加
             FuellDataGrid.Columns.Add(new DataGridTextColumn()
             {
-                Header = "",
+                Header = " ",
                 IsReadOnly = false,
                 FontSize = 12,
                 Binding = new Binding("Use")
             });
 
+            // 燃料カラムを追加
             foreach (Fuel fuel in Fuels)
             {
                 FuellDataGrid.Columns.Add(new DataGridTextColumn() {
-                    Header = string.Format("{0}({1})",fuel.FuelName,fuel.FuelUnit),
+                    Header = string.Format("{0} ({1})", fuel.FuelName, fuel.FuelUnit),
                     IsReadOnly = false,
                     FontSize = 12,
+                    Width = 100,
                     Binding = new Binding(fuel.FuelName) });
+
+                // 集計行を追加
+                TextBlock tb = new TextBlock() {
+                    Width = 100,
+                    Text = "total"
+
+                };
+                TotalRow.Children.Add(tb);
+
+
             }
+
+
 
 
 
