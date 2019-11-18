@@ -51,7 +51,7 @@
 |CSSみたいに外部ファイルにスタイルを定義したい|[【WPF】スタイルをCSSみたいに外部ファイルに定義する](https://www.doraxdora.com/blog/2017/06/08/post-1155/)|
 |レイアウトの作り方|[WPF4.5入門 その15 「レイアウトコントロールのDockPanelとWrapPanel」](https://blog.okazuki.jp/entry/20130105/1357395569)|
 |OSSのツールキット|[SilverlightToolkit](https://github.com/microsoftarchive/SilverlightToolkit)/[WPFToolkit](https://archive.codeplex.com/?p=wpf)/[Windows GUIプログラミング入門20 NuGet(2), コントロール集](https://qiita.com/Kosen-amai/items/c5cecf81240407693cda)|
-|MVVMが難しいよ！|[PrismとReactivePropertyで簡単MVVM！](https://qiita.com/hiki_neet_p/items/e381c687b0644c0e4978)|
+|MVVMが難しいよ！|[PrismとReactivePropertyで簡単MVVM！](https://qiita.com/hiki_neet_p/items/e381c687b0644c0e4978)/[MVVM フレームワーク Prism の全体概観](https://qiita.com/toydev/items/cf1bb4b519e7e2453d46)|
 
 2. 画面遷移機能を作る  
  
