@@ -54,6 +54,7 @@
 |MVVMが難しいよ！|[MVVM入門 その１「シンプル四則演算アプリケーションの作成」](https://code.msdn.microsoft.com/windowsdesktop/MVVM-d8261534)/[PrismとReactivePropertyで簡単MVVM！](https://qiita.com/hiki_neet_p/items/e381c687b0644c0e4978)/[MVVM フレームワーク Prism の全体概観](https://qiita.com/toydev/items/cf1bb4b519e7e2453d46)|
 |xaml内で文字列の加工とかしたい|[WPFのStringFormatによるフォーマット指定](http://nineworks2.blog.fc2.com/blog-entry-10.html)|
 |バリデーションチェックしたいけどIDataErrorInfoしか使えないよ|[IDataErrorInfoとValidation.ErrorTemplateを利用してエラーを表示する](https://www.pine4.net/Memo/Article/Archives/427)/[WPFでの入力値検証](http://sourcechord.hatenablog.com/entry/2014/05/11/202656)|
+|ViewModelはどうやってビジネスロジックとお話しするの|[コマンドをバインディングする](http://marikooota.hatenablog.com/entry/2017/05/30/234258)|
 
 2. 画面遷移機能を作る  
  
